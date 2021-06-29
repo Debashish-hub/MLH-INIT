@@ -1,3 +1,3 @@
-# To Do App in React
+# Expense Tracker in React
 
 <img src='ex.png' />

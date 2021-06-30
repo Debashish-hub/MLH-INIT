@@ -1,4 +1,4 @@
-###  Hello WOrld!
+###  Hello World!
 Language  |   translation |
 |---|---|
 |Afrikaans:|    Hello Wêreld!|

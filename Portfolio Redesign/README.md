@@ -1,0 +1,1 @@
+Something about a _Computer Science & Engineering Junior_ at <b>College of Engineering and Technology</b> (Location: Bhubaneswar, Odisha, India) who is a <b> Web Developer</b>  🤓 | <b>Machine Learning Enthusiast</b> 👨🏻‍💻 | <b>C++ || Python</b> 🐍 | <b>Open Source Contributor</b> 📝| <b>Competitive Programmer</b>🤠 |.

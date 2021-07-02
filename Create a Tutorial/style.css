@@ -1,0 +1,51 @@
+*{   margin: 0;
+}
+
+body{
+  background-color: #F7F2F2;
+  margin-top: 45px;
+}
+.nav-link {
+    background-color: #333;
+    overflow: hidden;
+    position: fixed; 
+    top: 0; 
+    width: 100%;
+    left: 0;
+    right: 0;
+    color: #f2f2f2;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    text-align: center;
+}
+  
+.heading{
+    text-align: center;
+    color: #333333;
+    font-family: 'Times New Roman', Times, serif;
+    margin-top: 80px;
+    
+}
+.explaination{
+    padding: 30px;
+    text-align: center;
+    color: #333333;
+    margin-top: 10px;
+}
+
+
+
+
+.foot{
+background-color: #333333;
+color: #f2f2f2;
+text-align: center;
+overflow: hidden;
+bottom:0; 
+left: 0;
+width: 100%;
+font-size: 16px;
+padding: 12px;
+position:relative;
+}

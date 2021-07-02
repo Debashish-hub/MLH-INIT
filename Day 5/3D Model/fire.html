@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fire</title>
+    <link rel="stylesheet" href="fire.css">
+</head>
+<body>
+    <div class="text">
+        <h2>Python</h2>
+    </div>
+    <svg>
+        <filter id="fire">
+            <feturbulence id="feturbulence" baseFrequency="0.1 0.1"
+            numoctaves="2" seed="3">
+            <animate attributename="baseFrequency" dur="15s"
+            values="0.1 0.1;0.13 0.3" repeatcount="indefinite"></animate>
+        </feturbulence>
+            <fedisplacementmap in="SourceGraphic"
+            scale="30"></fedisplacementmap>
+        </filter>
+    </svg>
+</body>
+</html>

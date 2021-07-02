@@ -1,0 +1,21 @@
+#passwordSharingSettings{
+  #mover{
+    table{
+      td{
+        padding: 5px;
+      }
+    }
+    input[type="text"]{
+      width: 350px;
+    }
+    .account_mover_selector {
+      width: 350px;
+      .select2-choice {
+        height: 34px;
+      }
+    }
+  }
+  #requests-table{
+    width: 100%;
+  }
+}

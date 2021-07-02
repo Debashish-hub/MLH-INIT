@@ -1,0 +1,137 @@
+/**
+ * Nextcloud - passman
+ *
+ * @copyright Copyright (c) 2016, Sander Brand (brantje@gmail.com)
+ * @copyright Copyright (c) 2016, Marcos Zuriaga Miguel (wolfi@wolfi.es)
+ * @license GNU AGPL version 3 or any later version
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU Affero General Public License as
+ * published by the Free Software Foundation, either version 3 of the
+ * License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU Affero General Public License for more details.
+ *
+ * You should have received a copy of the GNU Affero General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ */
+
+@import 'variables';
+@import 'mixins';
+@import 'partials/button';
+@import 'partials/popovermenu';
+@import 'partials/tabs';
+@import 'partials/pwgen';
+@import 'partials/icon-picker';
+@import 'partials/share-incoming';
+@import 'vaults';
+@import 'credentials';
+@import 'menu';
+@import 'share_credential';
+@import 'settings';
+@import 'searchboxexpander';
+
+.app-passman{
+  overflow-x: hidden;
+}
+
+.template-hidden{
+  display: none !important;
+}
+
+.hide-animation {
+  display: inherit !important;
+  transition: ease-in-out .15s;
+}
+.hide-animation.ng-hide {
+  opacity: 0;
+}
+
+
+.ui-dialog{
+  z-index: 9999;
+}
+#notification{
+  .row{
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+}
+
+#app-content #app-content-wrapper #passman-controls {
+  border-bottom: 1px solid #c9c9c9;
+}
+
+#passman-controls {
+  box-sizing: border-box;
+  position: fixed;
+  margin: -45px 0 0;
+  right: 0;
+  left: 0;
+  border-bottom: 1px solid #c9c9c9;
+  padding: 0 !important;
+  background-color: rgba(255, 255, 255, .95);
+  z-index: 50;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  height: 44px !important;
+  .breadcrumb{
+    //Move Homeicon to the right to prevent overlap with burgermenu
+    @media only screen and (max-width: 769px) {
+      padding-left: 15px;
+    }
+    .addCredential{
+      padding-top: 1px;
+    }
+  }
+}
+@media only screen and (max-width: 768px){
+  #passman-controls{
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 1024px){
+  #app-navigation+#app-content #passman-controls {
+    left: 300px;
+    width: calc( 100% - 300px ) !important;
+  }
+}
+#passman-controls .button,  #passman-controls, #passman-controls input[type='submit'],  #passman-controls input[type='text'],  #passman-controls input[type='password'],  #passman-controls select {
+  box-sizing: border-box;
+  display: inline-block;
+  height: 36px;
+  padding: 7px 10px;
+}
+.nopadding{
+  padding-right: 0;
+  padding-left: 0;
+}
+.clearfix{
+  clear: both;
+}
+//Fix NC fucking up our style
+input[type="checkbox"]{
+  min-height: inherit;
+}
+.alert {
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+.alert-danger {
+  color: #a94442;
+  background-color: #f2dede;
+  border-color: #ebccd1;
+}
+
+.ui-button.ui-widget{
+  min-height: unset !important;
+}

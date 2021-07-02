@@ -1,0 +1,35 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 90vh;
+  background: #000;
+   
+}
+.text{
+  position: relative;
+  width: 100%;
+  text-align: center;
+  filter: url(#fire);
+}
+.text h2{
+  position: relative;
+  color: #ffeb3c;
+  letter-spacing: 10px;
+  font-size: 15em;
+  font-weight: 1000;
+  -webkit-box-reflect: below 3px;
+  text-shadow: 0 0 10px #ff8d3b,
+                  0 0 30px #ff8d3b,
+                  0 0 60px #ff8d3b,
+                  0 0 100px #ff8d3b;
+}
+svg{
+  width: 0;
+  height: 0;
+}

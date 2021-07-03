@@ -1,0 +1,17 @@
+{
+  "large": [
+    "github.com",
+    "gist.github.com",
+    "medium.com",
+    "www.npmjs.com",
+    "developer.mozilla.org",
+    "tableless.com.br",
+    "laracasts.com",
+    "docs.rs",
+    "www.digitalocean.com",
+    "developer.github.com"
+  ],
+  "xlarge": [
+    "nodejs.org"
+  ]
+}

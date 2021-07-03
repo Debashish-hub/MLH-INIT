@@ -1,0 +1,69 @@
+{
+  "name": "jinabox",
+  "version": "0.1.50",
+  "description": "A lightweight, customizable omnibox. Useful for searching text, images, videos, audios or all other kinds data with a Jina backend.",
+  "main": "dist/jinabox.umd.js",
+  "unpkg": "dist/jinabox.umd.min.js",
+  "scripts": {
+    "test": "jest",
+    "build": "mkdir -p dist && rollup -c && rollup --config rollup.config.prod.js",
+    "build:dev": "mkdir -p dist && rollup -c"
+  },
+  "files": [
+    "dist/"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jina-ai/jina-box.git"
+  },
+  "prepublishOnly": "npm run minify",
+  "keywords": [
+    "jina",
+    "jinabox",
+    "jina-box",
+    "neural search",
+    "search box",
+    "omnibox",
+    "image search",
+    "video search",
+    "audio search",
+    "semantic search",
+    "autocomplete"
+  ],
+  "author": {
+    "name": "Jina AI Dev Team",
+    "email": "hello@jina.ai",
+    "url": "https://jina.ai/"
+  },
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/jina-ai/jinabox.js/issues"
+  },
+  "homepage": "https://github.com/jina-ai/jinabox.js",
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+      "pre-push": "npm run test"
+    }
+  },
+  "devDependencies": {
+    "@babel/core": "^7.10.4",
+    "@babel/preset-env": "^7.10.4",
+    "@commitlint/cli": "^9.1.1",
+    "@commitlint/config-conventional": "^9.1.1",
+    "@rollup/plugin-node-resolve": "^8.1.0",
+    "@testing-library/dom": "^7.20.2",
+    "@testing-library/jest-dom": "^5.11.0",
+    "babel-jest": "^26.1.0",
+    "husky": "^4.2.5",
+    "jest": "^26.1.0",
+    "rollup": "^2.18.1",
+    "rollup-plugin-babel": "^4.4.0",
+    "rollup-plugin-postcss": "^3.1.2",
+    "rollup-plugin-terser": "^6.1.0",
+    "terser": "^4.7.0"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.10.3"
+  }
+}

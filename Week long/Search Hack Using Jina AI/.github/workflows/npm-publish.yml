@@ -1,0 +1,39 @@
+name: npm-publish
+on:
+  push:
+    branches:
+      - master
+    paths:
+    - 'src/**'
+    - 'package.json'
+jobs:
+  npm-publish:
+    name: npm-publish
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@master
+    - name: Set up Node.js
+      uses: actions/setup-node@v1
+      with:
+        node-version: 14
+        registry-url: 'https://registry.npmjs.org'
+    - name: set git email
+      run: |
+        git config --global user.email "dev-bot@jina.ai"
+        git config --global user.name "Jina Dev Bot"
+    - name: get current version
+      run: |
+        npm version patch
+    - name: publish
+      run: npm install && npm run build && npm publish
+      env:
+        NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }} # You need to set this in your repo settings
+    - name: run git status
+      run: git status
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # Leave this as is, it's automatically generated
+    - name: Push changes
+      uses: ad-m/github-push-action@master
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
